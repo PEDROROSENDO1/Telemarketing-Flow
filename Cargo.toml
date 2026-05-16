@@ -1,10 +1,20 @@
 [package]
 name = "telemarketing-flow"
 version = "0.1.0"
-edition = "2021"
+edition = "2024"
 
 [dependencies]
-gtk4 = { version = "0.9", features = ["v4_18"] }
-gdk4 = { version = "0.9", features = ["v4_18"] }
-webkit6 = "0.4.0"
-glib = "0.20"
+gtk4 = { version = "0.11", features = ["v4_18"] }
+gdk4 = { version = "0.11", features = ["v4_18"] }
+webkit6 = "0.6.1"
+glib = "0.22"
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+strip = true
+debug = false
+incremental = false
+rpath = false
