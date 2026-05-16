@@ -70,5 +70,6 @@ fn build_ui(app: &Application) {
     window.add_controller(key_controller);
 
     window.set_child(Some(&webview));
+    window.fullscreen(); // Inicia o aplicativo em tela cheia por padrão
     window.present();
 }
