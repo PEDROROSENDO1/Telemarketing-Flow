@@ -48,7 +48,7 @@
     <script>
         const flowData = {
             start: {
-                text: "[Nome da Pessoa], aqui é o Pedro da Rocket. Tudo bem? [PAUSA] [Nome da Pessoa], vou ser extremamente direto com você em respeito ao seu tempo precioso. Minha equipe de inteligência corporativa mapeou o ecossistema comercial da região, e o nome da sua empresa acendeu um alerta vermelho de oportunidade não aproveitada no nosso sistema de auditoria. Você tem 30 segundos rápidos para eu te explicar exatamente o que está acontecendo na sua mesa?",
+                text: "[Nome da Pessoa], aqui é o [Seu nome] da Rocket. Tudo bem? [PAUSA] [Nome da Pessoa], basicamente o motivo dessa ligação é que eu e minha equipe identificamos sua empresa na região, e isso acendeu um alerta de oportunidade não aproveitada no nosso sistema. Você teria 30 segundos para eu explicar o que está acontecendo?",
                 subtext: [
                     "Tonalidade: Confiança absoluta, energia contagiante e autoridade instantânea.",
                     "Não use tom de vendedor carente; fale como um especialista que traz uma informação vital.",
@@ -64,7 +64,7 @@
             },
 
             objecao_inicial: {
-                text: "Eu entendo perfeitamente que você está ultra ocupado e que seu tempo vale ouro, [Nome da Pessoa]. É exatamente por esse motivo que estou te ligando. Se fosse uma ligação comum de vendas eu nem gastaria meus minutos e muito menos os seus. Estou falando de um diagnóstico de vazamento de receita na sua empresa que leva exatos 15 minutos para ser visualizado em tela. Me dê um voto de confiança: o que é melhor para você conferir isso, amanhã à tarde ou quinta pela manhã?",
+                text: "Entendo que seu tempo está corrido, [Nome da Pessoa], e por isso vou ser bem direto ao ponto. O que quero te mostrar é um diagnóstico simples sobre perdas de clientes e dinheiro que você está tendo e não está vendo. Vou agendar para você uma pequena reunião de 20 minutos. Fica melhor para você amanhã às 12h ou às 17h?",
                 subtext: [
                     "Tonalidade: Totalmente assertivo. Responda imediatamente, sem hesitar.",
                     "Técnica: Deflexão em linha reta. Use a pressa dele a seu favor."
@@ -77,22 +77,22 @@
             },
 
             interessado: {
-                text: "[Nome da Pessoa]! Para eu validar se a sua empresa cumpre os pré-requisitos para este lote exclusivo de alavancagem regional... Me responde apenas uma coisa: Hoje, se um cliente com dinheiro no bolso procurar pelo seu tipo de serviço no ambiente digital, ele vai encontrar uma estrutura de autoridade absoluta da sua empresa, ou ele vai acabar caindo direto no colo do seu concorrente que está mais posicionado?",
+                text: "[Nome da Pessoa], me responde só uma coisa. Hoje, quando um cliente procura seu serviço na internet, ele encontra sua empresa ou um concorrente?",
                 subtext: [
                     "Tonalidade: Tom consultivo, de diagnóstico médico sério.",
                     "Faça a pergunta e faça um silêncio absoluto. Deixe o cliente sentir o peso de estar vulnerável no mercado.",
                     "Direcione o cliente a admitir que a presença digital dele está deixando a desejar."
                 ],
                 options: [
-                    { text: "SE QUALIFICA (ADMITIU FALHA)", action: "qualifica" },
-                    { text: "DIZ QUE JÁ ESTÁ PERFEITO", action: "objecao_ja_tenho" },
+                    { text: "SE QUALIFICA / ADMITIU FALHA", action: "qualifica" },
+                    { text: "DIZ QUE JÁ ESTÁ PERFEITO", action: "objecao_jatenho" },
                     { text: "NÃO SE QUALIFICA", action: "nao_qualifica" }
                 ],
                 step: 2
             },
 
-            objecao_ja_tenho: {
-                text: "Fantástico que você já investe e tem ferramentas ativas, [Nome da Pessoa]! Isso me mostra de primeira que você é um gestor que entende o valor estratégico do digital. No entanto, o que o nosso software auditou não foi a sua postagem de conteúdo superficial, mas sim um gargalo grave na sua conversão de cliques em vendas reais, onde leads qualificados estão se perdendo no processo. É justamente esse ponto cego que quero te mostrar na tela. Amanhã às [14h] ou quinta às [10h] fica melhor para abrirmos essa ferramenta?",
+            objecao_jatenho: {
+                text: "Ótimo saber que você já investe no digital, [Nome da Pessoa]. Isso mostra que você entende a importância desse canal. Mesmo assim, identificamos um possível gargalo entre o interesse do cliente e a venda. É exatamente isso que eu gostaria de te mostrar. Fica melhor para você amanhã às 12h ou depois de amanhã às 17h?",
                 subtext: [
                     "Técnica: Elogie para desarmar o ego e em seguida mude o foco para métricas reais de dinheiro/conversão."
                 ],
@@ -104,18 +104,21 @@
             },
 
             pegar_contato: {
-                text: "Entendo perfeitamente, [Nome da Pessoa]. Como se trata de uma auditoria de alavancagem de receita voltada direto para a mesa de decisões, qual é o ramal ou o contato direto do responsável estratégico por novos negócios que eu devo reportar este relatório agora?",
+                text: "Entendi, [Nome da Pessoa]. Nesse caso, você poderia me passar o contato da pessoa responsável por negócios ou pelas decisões estratégicas? Assim eu direciono melhor essa análise para quem cuida disso.",
                 subtext: [
                     "Tonalidade: Extremamente profissional e burocrático, parecendo uma entrega de documento corporativo obrigatório."
                 ],
                 options: [
-                    { text: "FINALIZAR ATENDIMENTO", action: "fim" },
+                    { text: "FINALIZAR ATENDIMENTO", action: "fim" }
                 ],
                 step: 2
             },
 
             curiosidade: {
-                text: "Nós rodamos um cruzamento de dados públicos estruturados, performance em redes de pesquisa e inteligência competitiva local. A verdade nua e crua, [Nome da Pessoa], é que nós selecionamos cirurgicamente um grupo restrito de empresas com excelente operação offline, mas que possuem um abismo técnico digital que está entregando leads de bandeja para a concorrência. Nosso projeto corrige essa falha de receita, mas a nossa janela de atuação é exclusiva e limitada por região.",
+                text: "Basicamente, nós analisamos dados públicos, presença digital e posicionamento competitivo da sua região. Com isso, identificamos empresas que são fortes na operação, mas ainda têm pontos a melhorar e perdem para concorrentes. Sua empresa entrou nesse grupo, e é justamente essa falha que buscamos corrigir.",
+                subtext: [
+                    "Tonalidade: Explicação firme, objetiva e com linguagem de análise."
+                ],
                 options: [
                     { text: "AVANÇAR PARA DIAGNÓSTICO", action: "interessado" },
                     { text: "ISSO É UMA VENDA?", action: "desconfia" }
@@ -124,20 +127,20 @@
             },
 
             objecao_total: {
-                text: "Perfeito, [Nome da Pessoa], respeito totalmente sua decisão. Nosso foco exclusivo é trabalhar com marcas que estão prontas para dominar o mercado regional imediatamente. Vou arquivar o seu relatório de auditoria e liberar essa vaga de alavancagem para o próximo competidor da lista da sua rua. Desejo sucesso absoluto nos seus negócios!",
+                text: "Sem problema, [Nome da Pessoa], respeito sua decisão. Vou encerrar por aqui. Sucesso ao seu negócio.",
                 subtext: [
-                    "Técnica: Desapego total e gatilho de perda massivo (FOMO). Faça ele sentir que o concorrente vai levar a vaga."
+                    "Técnica: Desapego total e encerramento respeitoso."
                 ],
                 options: [
-                    { text: "FINALIZAR", action: "fim" },
+                    { text: "FINALIZAR", action: "fim" }
                 ],
                 step: 2
             },
 
             qualifica: {
-                text: "O diagnóstico é claro, [Nome da Pessoa]: você tem uma marca excelente, mas está deixando muito dinheiro na mesa dia após dia. O próximo passo lógico não é eu tentar te vender algo por telefone, é te provar valor em tempo real. Vou abrir o nosso painel privado em uma videoconferência rápida de 15 minutos e te apontar onde o seu lucro está vazando. Para organizarmos as agendas: amanhã às [14h] ou quinta às [10h], qual dessas janelas é incontornável para você?",
+                text: "O cenário é simples, [Nome da Pessoa]: sua empresa tem potencial, mas pode estar perdendo vendas por falhas no processo digital. Em vez de tentar te vender algo agora, prefiro te mostrar isso na prática em uma reunião rápida de 15 minutos. Entre amanhã às 14h e quinta às 10h, qual horário funciona melhor?",
                 subtext: [
-                    "Técnica: Fechamento Presumido (Assumptive Close) com dupla alternativa de escolha.",
+                    "Técnica: Fechamento presumido (Assumptive Close) com dupla alternativa de escolha.",
                     "Nunca pergunte se ele quer ou se ele pode; dê as opções de horário como se a reunião já estivesse marcada."
                 ],
                 options: [
@@ -150,7 +153,7 @@
             },
 
             objecao_vou_pensar: {
-                text: "Eu entendo perfeitamente o seu lado, [Nome da Pessoa]. Mas, para ser 100% transparente com você... na minha experiência prática ajudando dezenas de empresas a escalarem, quando um empresário de ponta me diz que 'vai pensar', geralmente é por um de dois motivos: ou ele não viu sentido nenhum na oportunidade e só está sendo educado para não me dizer um 'não', ou ele gostou muito, mas ficou com alguma dúvida oculta na mente que eu ainda não esclareci. Sendo totalmente franco comigo, qual dos dois cenários é o seu?",
+                text: "Eu entendo perfeitamente o seu lado, [Nome da Pessoa]. Mas, para ser 100% transparente com você, na minha experiência prática ajudando dezenas de empresas a escalarem, quando um empresário de ponta me diz que vai pensar, geralmente é por um de dois motivos: ou ele não viu sentido nenhum na oportunidade e só está sendo educado para não me dizer um não, ou ele gostou muito, mas ficou com alguma dúvida oculta na mente que eu ainda não esclareci. Sendo totalmente franco comigo, qual dos dois cenários é o seu?",
                 subtext: [
                     "Tonalidade: Voz mansa, calma, porém cirúrgica e firme.",
                     "PAUSA ABSOLUTA após a pergunta. Deixe o silêncio constranger o cliente até que ele se explique.",
@@ -164,7 +167,7 @@
             },
 
             esclarecer_duvida: {
-                text: "Perfeito, [Nome da Pessoa], obrigado pela franqueza. Vamos direto ao ponto crítico: o que exatamente te impede hoje de investir 15 minutos para analisar dados sobre o seu próprio faturamento? É uma indisponibilidade real de tempo na agenda para evoluir a empresa, ou você sente no fundo que estancar essa perda diária de clientes para o concorrente não é a prioridade número um da sua operação hoje?",
+                text: "Perfeito, obrigado pela sinceridade. Então vamos direto ao ponto: o que te impede hoje de separar 15 minutos para analisar possíveis perdas de venda na sua empresa? É falta de tempo na agenda ou isso ainda não parece prioridade para você?",
                 subtext: [
                     "Técnica: Encurralar a desculpa mostrando que recusar olhar os dados é o mesmo que ignorar o crescimento da própria empresa."
                 ],
@@ -176,7 +179,7 @@
             },
 
             objecao_socio: {
-                text: "Excelente, [Nome da Pessoa]! Isso me prova que a sua estrutura corporativa é séria e responsável. E é exatamente por isso que essa reunião precisa acontecer com você primeiro. Não quero desperdiçar um minuto do tempo do seu sócio sem antes te provar de forma matemática que isso coloca dinheiro no bolso da empresa de vocês. Fazemos o seguinte: olhamos a ferramenta juntos por 15 minutos. Se você olhar e disser 'Pedro, isso é genial', eu mesmo monto um sumário executivo para você apresentar ao seu sócio com autoridade. Fechado amanhã às [14h]?",
+                text: "Perfeito, isso mostra que vocês levam a gestão a sério. Por isso, faz mais sentido eu te apresentar primeiro os dados e o diagnóstico. Em 15 minutos você entende o cenário e, se enxergar valor, eu ainda te ajudo a levar isso de forma clara para o seu sócio. Podemos deixar [Data que ele quis]?",
                 subtext: [
                     "Técnica: Assuma a responsabilidade de municiar o contato com argumentos para que ele vença o sócio depois."
                 ],
@@ -188,45 +191,48 @@
             },
 
             nao_qualifica: {
-                text: "Perfeito, [Nome da Pessoa]. Entendido. Pelas métricas apresentadas, vejo que o seu modelo operacional atual ainda não está na maturidade ideal para absorver o volume de tração e tecnologia que a Rocket entrega. Vou deixar seu relatório arquivado e, em um momento de expansão futura, podemos reavaliar. Um abraço!",
+                text: "Entendi, [Nome da Pessoa]. Pelo que conversamos, talvez este ainda não seja o melhor momento para avançar com esse tipo de solução. Vou deixar seu contato arquivado e podemos retomar isso no futuro, se fizer sentido.",
                 subtext: [
-                    "Tonalidade: Autoridade de quem desqualifica o lead. O Lobo não perde tempo com quem não pode comprar."
+                    "Tonalidade: Autoridade de quem desqualifica o lead."
                 ],
                 options: [
-                    { text: "REINICIAR FLUXO", action: "restart" },
+                    { text: "REINICIAR FLUXO", action: "restart" }
                 ],
                 step: 3
             },
 
             fim: {
-                text: "Mapeamento encerrado com sucesso. Registre as informações estratégicas coletadas no campo lateral de anotações e prepare-se para a próxima discagem com foco total na meta.",
+                text: "Atendimento encerrado. Registre as informações importantes nas anotações e siga para o próximo contato.",
                 options: [
-                    { text: "REINICIAR FLUXO", action: "restart" },
+                    { text: "REINICIAR FLUXO", action: "restart" }
                 ],
                 step: 3
             },
 
             desconfia: {
-                text: "Excelente pergunta! Se a sua preocupação é eu tentar te empurrar um serviço de prateleira por telefone, pode ficar totalmente tranquilo. Isso é um diagnóstico técnico e gratuito de engenharia digital. Se o que eu te mostrar em tempo real na tela fizer completo sentido para o seu lucro líquido, nós agendamos negócios no futuro. Se não fizer, você sai da chamada com um mapa de erros estratégico de graça. O risco é inteiramente meu. Vamos abrir essa tela amanhã?",
+                text: "Ótima pergunta. Minha proposta aqui não é te vender algo no telefone, e sim te mostrar um diagnóstico técnico gratuito. Se fizer sentido para sua empresa, avançamos depois. Se não fizer, você pelo menos sai com uma visão mais clara dos pontos que pode melhorar. Podemos marcar para amanhã [Horário]?",
+                subtext: [
+                    "Técnica: Redução de resistência e clareza de proposta."
+                ],
                 options: [
-                    { text: "AVANÇAR PARA PERGUNTAS", action: "interessado" },
+                    { text: "AVANÇAR PARA PERGUNTAS", action: "interessado" }
                 ],
                 step: 3
             },
 
             reuniao_sucesso: {
-                text: "Excelente escolha, [Nome da Pessoa]. Acabei de travar a nossa janela de 15 minutos aqui no meu painel de auditoria. Trate esse compromisso com extrema seriedade, pois é uma consultoria estratégica de alto nível com dados que ninguém no mercado vai te mostrar de graça. Bloqueie este horário na sua agenda pessoal. Qual é o seu e-mail principal para eu disparar o convite com o link de transmissão da sala agora?",
+                text: "Perfeito, [Nome da Pessoa]. Reservei aqui o seu horário de 15 minutos. Agora me passe seu melhor e-mail ou WhatsApp para eu te enviar o convite com o link da reunião.",
                 subtext: [
-                    "Tonalidade: Tom de encerramento firme. Defina o compromisso como algo imperdível e de altíssimo valor."
+                    "Tonalidade: Tom de encerramento firme. Defina o compromisso como algo importante e de valor."
                 ],
                 options: [
-                    { text: "FINALIZAR AGENDAMENTO", action: "fim" },
+                    { text: "FINALIZAR AGENDAMENTO", action: "fim" }
                 ],
                 step: 4
             },
 
             wpp: {
-                text: "Eu posso sim te mandar uma apresentação por lá, [Nome da Pessoa], mas sendo 100% transparente com você: é um ecossistema visual e técnico complexo. Sem o meu direcionamento guiando seus olhos na tela, vai virar apenas mais um PDF pesado acumulando poeira digital na sua galeria do celular. Vamos fazer o seguinte: travamos os 15 minutos. Se nos primeiros 5 você achar que é perda de tempo, desligamos na hora. Justo? Qual o seu WhatsApp oficial para eu enviar o link da sala?",
+                text: "Posso te enviar algo no WhatsApp, sim, mas esse tipo de análise faz mais sentido com uma explicação rápida junto. Então proponho o seguinte: marcamos 15 minutos e, se nos primeiros 5 você perceber que não faz sentido, encerramos sem problema. Qual é o seu WhatsApp para eu te mandar o link?",
                 subtext: [
                     "Técnica: Redução do custo percebido e quebra de objeção do material escrito."
                 ],
@@ -236,14 +242,13 @@
                 ],
                 step: 4
             }
-
         };
 
-        let currentFlow = 'start';
+        let currentFlow = "start";
         let history = [];
 
         function formatTextWithBrackets(text) {
-            return text.replace(/\[([^\]]+)\]/g, '<span class="bracket-text">[$1]</span>');
+            return text.replace(/\[(.*?)\]/g, '<span class="bracket-text">[$1]</span>');
         }
 
         function handleResponse(action) {
@@ -255,51 +260,44 @@
         function updateFlow() {
             const flow = flowData[currentFlow];
             if (!flow) {
-                console.error('Flow não encontrado:', currentFlow);
+                console.error("Flow não encontrado:", currentFlow);
                 return;
             }
 
-            document.getElementById('mainText').innerHTML = formatTextWithBrackets(flow.text);
-            document.getElementById('stepIndicator').textContent = `Passo ${flow.step}/10`;
+            document.getElementById("mainText").innerHTML = formatTextWithBrackets(flow.text);
+            document.getElementById("stepIndicator").textContent = `Passo ${flow.step}/10`;
 
-            // Atualizar subtexto
-            const subtextContainer = document.getElementById('subtextContainer');
-            subtextContainer.innerHTML = '';
+            const subtextContainer = document.getElementById("subtextContainer");
+            subtextContainer.innerHTML = "";
 
             if (flow.subtext) {
                 flow.subtext.forEach(text => {
-                    const p = document.createElement('p');
+                    const p = document.createElement("p");
                     p.innerHTML = formatTextWithBrackets(text);
                     subtextContainer.appendChild(p);
                 });
             }
 
-            // Atualizar estado do botão voltar
-            const backButton = document.getElementById('backButton');
-            if (history.length === 0) {
-                backButton.disabled = true;
-            } else {
-                backButton.disabled = false;
-            }
+            const backButton = document.getElementById("backButton");
+            backButton.disabled = history.length === 0;
 
-            const container = document.getElementById('buttonContainer');
-            container.innerHTML = '';
+            const container = document.getElementById("buttonContainer");
+            container.innerHTML = "";
 
             flow.options.forEach(option => {
-                const button = document.createElement('button');
-                button.className = 'button';
+                const button = document.createElement("button");
+                button.className = "button";
                 button.onclick = () => {
-                    if (option.action === 'restart') {
+                    if (option.action === "restart") {
                         restartFlow();
                     } else {
                         handleResponse(option.action);
                     }
                 };
 
-                const h2 = document.createElement('h2');
+                const h2 = document.createElement("h2");
                 h2.innerHTML = formatTextWithBrackets(option.text);
                 button.appendChild(h2);
-
                 container.appendChild(button);
             });
         }
@@ -312,13 +310,12 @@
         }
 
         function restartFlow() {
-            currentFlow = 'start';
+            currentFlow = "start";
             history = [];
             updateFlow();
-            document.getElementById('notesArea').value = "";
+            document.getElementById("notesArea").value = "";
         }
 
-        // Inicializar o fluxo
         updateFlow();
     </script>
 </body>
